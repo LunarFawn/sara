@@ -8,9 +8,6 @@ from collections import namedtuple
 from serena.utilities.ensemble_structures import Sara2SecondaryStructure, Sara2StructureList
 
 
-
-
-
 @define
 class Energy():
     kcal:float = 0
