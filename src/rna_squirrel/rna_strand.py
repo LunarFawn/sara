@@ -42,11 +42,15 @@ class Ensemble():
     energy_groups:List[EnsembleGroup] = []
     mfe_structure:SecondaryStructure = SecondaryStructure()
     mea_structure:SecondaryStructure = SecondaryStructure()
+    
+    def add_structure(self ):
+        """
+        Add a structure to the ensemble 
+        """
+        self.energy_groups
+        
 
 @define
 class RNAStrand():
-    primary_structure: PrimaryStructure = PrimaryStructure()
+    primary_structure: PrimaryStructure
     ensemble: Ensemble = Ensemble()
-
-
-    
