@@ -30,7 +30,13 @@ class EnergyGroup():
     structure_list: List[SecondaryStructure] = []
     mfe_structure:SecondaryStructure = SecondaryStructure()
     mea_structure:SecondaryStructure = SecondaryStructure()
-
+    
+    def add_structure(self, structure:SecondaryStructure):
+        """
+        add a secondary structure to the energy group
+        """
+        self.structure_list.append(structure)
+        
 class EnsembleGroup(namedtuple):
     start_energy: float
     group:EnergyGroup
@@ -43,11 +49,12 @@ class Ensemble():
     mfe_structure:SecondaryStructure = SecondaryStructure()
     mea_structure:SecondaryStructure = SecondaryStructure()
     
-    def add_structure(self ):
+    def add_group(self, start_energy:float, group:EnergyGroup):
         """
-        Add a structure to the ensemble 
+        Add a energy group with its label to the ensemble 
         """
-        self.energy_groups
+        new_group: EnsembleGroup = EnsembleGroup(start_energy, group)
+        self.energy_groups.append(new_group)
         
 
 @define
